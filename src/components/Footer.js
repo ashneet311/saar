@@ -13,11 +13,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ml-48 xsm:ml-0">
           {/* Logo & Description */}
           <div>
-            <img src="logo-w.png" alt="" />
+            <img src="logo-w.png" alt="" className='xsm:w-20'/>
              {/* Address Section */}
             <div>
             <h3 className="lg:text-lg md:text-xs font-semibold mb-4">Addresses</h3>
-            <ul className="space-y-2 lg:text-base md:text-xs">
+            <ul className="space-y-2 xsm:text-xs lg:text-base md:text-xs">
               <li>B-210, 2nd Floor, Elante Offices, Industrial Area Phase - 1, Chandigarh</li>
               <li>314, Tower 4, DLF Corporate Greens, Sector 74, Gurgaon</li>
               <li>Supreme Headquarters, Office 1003, Junction of 14th and 33rd Road, Bandra, West Mumbai, Maharashtra</li>
@@ -26,9 +26,9 @@ const Footer = () => {
           </div>
 
           {/* Links Section */}
-          <div className='ml-20'>
-            <h3 className="lg:text-lg md:text-xs  font-semibold mb-4 ">Popular Searches</h3>
-            <ul className="space-y-2 lg:text-base md:text-xs">  
+          <div className='ml-20 xsm:ml-0'>
+            <h3 className="lg:text-lg md:text-xs  font-semibold mb-4 xsm:text-xs ">Popular Searches</h3>
+            <ul className="space-y-2 lg:text-base md:text-xs xsm:text-[10px]">  
               <li>Our Projects</li>
               <li>Our Cities</li>
               <li>Property for Sale</li>
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
 
           {/* Gallery Section */}
-          <div className='ml-20 md:hidden lg:block'>
+          <div className='ml-20 xsm:ml-0 md:hidden lg:block'>
             <h3 className="text-lg font-semibold mb-4">Gallery</h3>
             <div className="grid grid-cols-2 gap-2">
               <img src="chandigarh.jpg" alt="Gallery 1" className="w-full h-20 object-cover" />

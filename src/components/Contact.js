@@ -68,9 +68,9 @@ const Contact = () => {
     }
   };
   return (
-    <div className="font-roboto ">
+    <div className="font-roboto xsm:overflow-hidden">
       {/* Header Section */}
-      <div className="bg-[#9A7B4F] w-full h-full flex items-center flex-col p-4 gap-2">
+      <div className="bg-[#9A7B4F] w-full h-full pt-10 flex items-center flex-col p-4 gap-2">
         <h1 className="text-3xl tracking-wide text-white">Contact Us</h1>
         <p className="text-white text-xs tracking-wider">
           <NavLink to="/" className="text-white">
@@ -95,10 +95,10 @@ const Contact = () => {
       </div>
 
       {/* Contact Section */}
-      <div className="px-20">
-        <div className="flex justify-center p-10 items-center">
+      <div className="px-20 xsm:px-0 md:px-0">
+        <div className="flex xsm:flex-col xsm:gap-5 xsm:p-5 justify-center p-10 items-center">
           {/* Head Office Details */}
-          <div className="flexx flex-col gap-3 w-[50%]">
+          <div className="flexx flex-col gap-3 w-[50%] xsm:w-full">
             <h1 className="font-semibold text-2xl py-4 text-start">
               Head Office
             </h1>
@@ -143,7 +143,7 @@ const Contact = () => {
           </div>
 
           {/* Map Section */}
-          <div className="map w-[50%]">
+          <div className="map w-[50%] xsm:w-full">
             <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
               <GoogleMap
                 mapContainerStyle={containerStyle}
@@ -155,8 +155,8 @@ const Contact = () => {
             </LoadScript>
           </div>
         </div>
-        <div className="flex p-10">
-          <div className="flexx flex-col gap-3 w-[50%]">
+        <div className="flex xsm:flex-col xsm:gap-4 xsm:p-5 md:p-4 p-10">
+          <div className="flex  flex-col gap-3 xsm:w-full w-[50%]">
             <h1 className="font-semibold text-2xl py-4 text-start">
               Maharashtra (Corporate Office)
             </h1>
@@ -201,7 +201,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="flexx flex-col gap-3 w-[50%]">
+          <div className="flex flex-col gap-3 xsm:w-full w-[50%]">
             <h1 className="font-semibold text-2xl py-4 text-start">
               Gurgaon (Branch Office)
             </h1>
