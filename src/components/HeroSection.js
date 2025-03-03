@@ -50,7 +50,7 @@ const Herosection = () => {
   const commersial = useCountUp(118);
   return (
     // main hero-section
-    <div className="relative">
+    <div className="relative xsm:overflow-hidden ">
       {/* Slider for the background */}
       <Slider {...sliderSettings} className="h-[550px] ">
         {slides.map((slide, index) => (
@@ -65,11 +65,11 @@ const Herosection = () => {
       </Slider>
 
       {/* Overlay Content */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white">
+      <div className="absolute inset-0 bg-black bg-opacity-50  flex flex-col items-center justify-center text-center text-white">
         {/* Typewriter */}
         <div className="h-[120px] lg:h-[150px] flex items-center justify-center lg:justify-start">
           <h1
-            className={`text-3xl lg:text-3xl font-bold text-white text-center lg:text-start tracking-wide sm:leading-normal lg:tracking-wide transition-all duration-400 h-[3.75rem] lg:h-[4.5rem] `}
+            className={`text-3xl md:text-xl lg:text-3xl xsm:text-xs font-bold text-white text-center lg:text-start tracking-wide sm:leading-normal lg:tracking-wide transition-all duration-400 h-[3.75rem] lg:h-[4.5rem] `}
           >
             <Typewriter
               words={headings}
@@ -84,7 +84,7 @@ const Herosection = () => {
         </div>
 
         {/* Buildings */}
-        <div className=" bg-[#9A7B4F] opacity-60 flex justify-around space-x-20 py-3 px-10">
+        <div className=" bg-[#9A7B4F] xsm:hidden md:flex opacity-60 flex justify-around space-x-20 py-3 md:px-5 lg:px-10">
           {[
             { img: "condo.png", text: "New Project" },
             { img: "apartment.png", text: "Apartment" },
@@ -94,8 +94,8 @@ const Herosection = () => {
             { img: "shop.png", text: "Shop" },
           ].map((item, index) => (
             <div key={index} className="flex flex-col items-center gap-2">
-              <img src={item.img} alt={item.text} className="w-10 " />
-              <span className="tracking-tighter flex text-white font-bold justify-center gap-1">
+              <img src={item.img} alt={item.text} className="lg:w-10 md:w-5" />
+              <span className="tracking-tighter flex lg:text-base md:text-xs text-white font-bold justify-center gap-1">
                 {item.text.split(" ").map((word, i) => (
                   <span key={i}>{word} </span>
                 ))}
@@ -105,23 +105,23 @@ const Herosection = () => {
         </div>
 
         {/* Stats */}
-        <div className="bg-transparent text-white py-8">
-          <div className="flex justify-around gap-28">
+        <div className="bg-transparent text-white py-8  ">
+          <div className="flex justify-around xsm:grid xsm:grid-cols-2 xsm:gap-10 gap-28">
             <div className="text-center">
-              <p className="text-5xl font-bold">{clientCount}</p>
-              <p>+ Happy Customers</p>
+              <p className="lg:text-5xl md:text-xl font-bold">{clientCount}</p>
+              <p className="lg:text-base md:text-xs">+ Happy Customers</p>
             </div>
             <div className="text-center">
-              <p className="text-5xl font-bold">{projectCount}</p>
-              <p>+ Properties Sold</p>
+              <p className="lg:text-5xl md:text-xl font-bold">{projectCount}</p>
+              <p  className="lg:text-base md:text-xs">+ Properties Sold</p>
             </div>
             <div className="text-center">
-              <p className="text-5xl font-bold">{reviewCount}</p>
-              <p>+ Projects</p>
+              <p className=" lg:text-5xl md:text-xl font-bold">{reviewCount}</p>
+              <p className="lg:text-base md:text-xs">+ Projects</p>
             </div>
             <div className="text-center">
-              <p className="text-5xl font-bold">{commersial}</p>
-              <p>+ Commercial</p>
+              <p className="lg:text-5xl md:text-xl font-bold">{commersial}</p>
+              <p className="lg:text-base md:text-xs">+ Commercial</p>
             </div>
           </div>
         </div>

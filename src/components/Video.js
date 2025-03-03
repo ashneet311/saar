@@ -15,7 +15,7 @@ const videos = [
 
 const Video = () => {
   return (
-    <div className="p-10 bg-gray-50">
+    <div className="p-10  bg-gray-50">
       {/* Heading Section */}
       <div className="flex flex-col items-center justify-center mb-10">
         <p className="text-blue-500">Browse popular Videos</p>
@@ -23,7 +23,7 @@ const Video = () => {
       </div>
 
       {/* Video Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[60%]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[60%] xsm:w-full">
         {videos.map((video, index) => (
           <div
             key={index}

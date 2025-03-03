@@ -36,13 +36,13 @@ const cards = [
 
 const Properties = () => {
   return (
-    <div className="p-28 ">
+    <div className="p-28 xsm:p-5 ">
       {/* Header Section */}
       <div className="mb-8 text-center">
         <p className="text-blue-400 uppercase text-sm font-semibold">
           Browse popular properties
         </p>
-        <h1 className="text-3xl font-bold">Find Properties in Your City</h1>
+        <h1 className="text-3xl font-bold xsm:text-base">Find Properties in Your City</h1>
       </div>
 
       {/* Cards Grid */}

@@ -56,13 +56,13 @@ const card = [
 
 const Home = () => {
   return (
-    <div>
+    <div className="xsm:overflow-hidden">
       <Herosection />
-      <div className="flex flex-col items-center p-10">
+      <div className="flex flex-col items-center p-10 xsm:p-4">
         <p className="text-[#9A7B4F]">Find rental properties anywhere</p>
-        <h1 className="text-3xl font-bold">Discover Popular Property</h1>
+        <h1 className="text-3xl xsm:text-base font-bold">Discover Popular Property</h1>
         <div className="flex items-center w-full justify-center">
-          <div className=" grid grid-cols-3 xsm:grid-cols-1 gap-4 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 p-24">
+          <div className=" grid grid-cols-3 xsm:grid-cols-1 gap-4 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 md:p-5 xsm:p-5 lg:p-24">
             {card.map((item, index) => (
               <Card
                 key={index}

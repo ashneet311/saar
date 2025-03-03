@@ -297,11 +297,11 @@ const Property = () => {
     : commercial;
 
   return (
-    <div className="font-roboto">
+    <div className="font-roboto xsm:overflow-hidden">
       {/* Header Section */}
       <div className="bg-[#9A7B4F] w-full h-full flex items-center flex-col p-4 gap-2">
-        <h1 className="text-3xl tracking-wider text-white">Property List</h1>
-        <p className="text-white text-xs tracking-wider">
+        <h1 className="text-3xl tracking-wider text-white xsm:text-base">Property List</h1>
+        <p className="text-white text-xs tracking-wider xsm:text-[10px]">
           <NavLink to="/" className="text-white">
             HOME
           </NavLink>
@@ -324,7 +324,7 @@ const Property = () => {
       </div>
 
       {/* Tabs Section */}
-      <div className="px-32 py-4 flex gap-4">
+      <div className="px-32 xsm:px-12 py-4 flex gap-4">
         <button
           className={`px-4 py-2 rounded ${
             currentTab === "Residential"
@@ -348,7 +348,7 @@ const Property = () => {
       </div>
 
       {/* Filter Section */}
-      <div className="px-32 py-4 flex justify-end">
+      <div className="px-32 xsm:px-10 py-4 flex justify-end">
         {currentTab === "Residential" && (
           <select
             className="border border-gray-300 rounded px-4 py-2 text-gray-700"
@@ -374,64 +374,64 @@ const Property = () => {
       </div>
 
       {/* Property List Section */}
-      <div className="px-32 py-10 flex flex-col gap-10">
+      <div className="px-32 xsm:px-10 xsm:py-5 py-10 flex flex-col gap-10">
         {currentTab === "Residential" &&
           filteredResidential
             .slice(0, showAllResidential ? filteredResidential.length : 4)
             .map((item, index) => (
               <div
                 key={index}
-                className="flex gap-5 shadow-md hover:shadow-xl transition-all duration-700"
+                className="flex xsm:flex-col xsm:gap-2 gap-5 shadow-md hover:shadow-xl transition-all duration-700"
               >
-                <div className="relative group hover:cursor-pointer overflow-hidden w-[35%]">
+                <div className="relative group hover:cursor-pointer overflow-hidden xsm:w-full w-[35%]">
                   <img
                     src={item.image}
                     alt={item.heading}
                     className="w-full h-full object-cover hover:scale-125 transition duration-1000 shadow-inner"
                   />
                   <div className="absolute top-4 right-4 hover:cursor-pointer z-10 flex gap-2">
-                    <p className="bg-[#9A7B4F] text-white px-[9px] py-[3px] text-sm  tracking-tight items-center rounded-[2px]">
+                    <p className="bg-[#9A7B4F] text-white xsm:text-xs px-[9px] py-[3px] text-sm  tracking-tight items-center rounded-[2px]">
                       {item.ptype}
                     </p>
-                    <p className="bg-[#FA6742] text-white px-[9px] py-[3px] text-sm tracking-tight items-center rounded-[2px]">
+                    <p className="bg-[#FA6742] text-white xsm:text-xs px-[9px] py-[3px] text-sm tracking-tight items-center rounded-[2px]">
                       Sale
                     </p>
                   </div>
                 </div>
                 <div className="flex flex-col gap-6 p-4">
-                  <h1 className="text-lg font-medium">{item.heading}</h1>
-                  <p className="flex gap-1 text-sm text-gray-400">
-                    <FaLocationDot className="text-[#9A7B4F] text-lg" />
+                  <h1 className="text-lg font-medium xsm:text-sm">{item.heading}</h1>
+                  <p className="flex gap-1 text-sm text-gray-400 xsm:text-xs">
+                    <FaLocationDot className="text-[#9A7B4F] xsm:text-xs text-lg" />
                     {item.location}
                   </p>
                   <div className="grid grid-cols-2 gap-4">
-                    <p className="flex items-center gap-1">
+                    <p className="flex items-center gap-1 xsm:text-xs">
                       <FaRupeeSign className="text-[#9A7B4F]" />
                       {item.price}
                     </p>
-                    <p className="flex items-center gap-1">
+                    <p className="flex items-center gap-1 xsm:text-xs">
                       <FaArrowsAlt className="text-[#9A7B4F]" />
                       {item.area}
                     </p>
-                    <p className="flex items-center gap-1">
+                    <p className="flex items-center gap-1 xsm:text-xs">
                       <FaBuilding className="text-[#9A7B4F]" />
                       {item.flate}
                     </p>
-                    <p className="flex items-center gap-1">
+                    <p className="flex items-center gap-1 xsm:text-xs">
                       <FaBed className="text-[#9A7B4F]" />
                       {item.room}
                     </p>
                   </div>
                   <div className="flex gap-1">
-                    <button className="bg-[#0bbf41] text-white flex items-center px-3 rounded-[3px] py-2 gap-1">
+                    <button className="bg-[#0bbf41] xsm:text-xs text-white flex items-center px-3 rounded-[3px] py-2 gap-1">
                       <FaWhatsapp className="text-white" />
                       Quote
                     </button>
-                    <button className="bg-[#9A7B4F] text-white flex items-center px-3 rounded-[3px] py-2 gap-1">
+                    <button className="bg-[#9A7B4F] xsm:text-xs text-white flex items-center px-3 rounded-[3px] py-2 gap-1">
                       <IoCallSharp className="text-white" />
                       Call Us
                     </button>
-                    <button className="bg-[#9A7B4F] text-white flex items-center px-3 rounded-[3px] py-2 gap-1">
+                    <button className="bg-[#9A7B4F] xsm:text-xs text-white flex items-center px-3 rounded-[3px] py-2 gap-1">
                       <FaLink className="text-white" />
                       Visit
                     </button>
@@ -509,7 +509,7 @@ const Property = () => {
       <div className="px-32 py-4">
         {currentTab === "Residential" && (
           <button
-            className="px-4 py-2 bg-[#9A7B4F] text-white rounded"
+            className="px-4 py-2 xsm:text-xs bg-[#9A7B4F] text-white rounded"
             onClick={() => setShowAllResidential(!showAllResidential)}
           >
             {showAllResidential ? "Show Less" : "Show More"}

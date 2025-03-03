@@ -89,7 +89,7 @@ const Project = () => {
   };
 
   return (
-    <div className="px-32">
+    <div className="lg:px-32 md:px-5">
       <Slider {...settings}>
         {card.map((item, index) => (
           <div key={index} className="px-2">

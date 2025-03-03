@@ -36,8 +36,8 @@ const Navbar = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         } fixed top-0 left-0 w-full z-50`}
       >
-        <div className="bg-[#9A7B4F] text-white py-2 px-4 flex justify-between items-center">
-          <div className="flex gap-14">
+        <div className="bg-[#9A7B4F] text-white py-2 px-4 lg:text-base xsm:text-xs  md:text-xs flex xsm:flex-col justify-between items-center">
+          <div className="flex gap-14 xsm:flex-col xsm:gap-0">
             <Link
               className="hover:text-[#9A7B4F]"
               to="callto:+971582450101,+971552959123"
@@ -53,9 +53,9 @@ const Navbar = () => {
             <p className="text-sm">Saeed Alketbi & Ahmad Real Estate LLC</p>
           </div>
         </div>
-        <nav className="bg-white shadow-md px-1 gap-52 py-0 flex justify-center items-center">
-          <img src="/logo.png" alt="Logo" className="w-40" />
-          <ul className="flex space-x-6 text-sm">
+        <nav className="bg-white shadow-md px-1 lg:gap-52 xl:gap-52 2xl:gap-52 md:gap-10 py-0 flex justify-center items-center">
+          <img src="/logo.png" alt="Logo" className="w-40 xsm:w-20 xsm:-ml-5" />
+          <ul className="flex space-x-6 xsm:space-x-3  text-sm xsm:text-xs">
             <li>
               <NavLink
                 to="/"
@@ -91,8 +91,8 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <a href="https://wa.me/qr/S3LVDB3Y3SB3H1">
-            <button className="bg-[#0bbf41] text-white px-4 py-2 rounded-[2px] flex gap-1 items-center">
+          <a href="https://wa.me/qr/S3LVDB3Y3SB3H1" className=" xsm:ml-2">
+            <button className="bg-[#0bbf41] text-white px-4 xsm:px-2 xsm:py-1 xsm:text-xs py-2 rounded-[2px] flex gap-1 items-center">
               <FaWhatsapp /> Get Quote
             </button>
           </a>

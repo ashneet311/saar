@@ -62,20 +62,20 @@ const Client = () => {
     > <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
       {/* Section Heading */}
       <div className="text-center mb-10 flex flex-col  gap-6 z-10">
-        <h2 className="text-4xl font-bold">Hear From Our Clients</h2>
-        <button className="mt-3 px-5 py-2 bg-transparent border border-white  text-white hover:bg-white hover:text-blue-400 transition-all duration-300">
+        <h2 className="text-4xl xsm:text-base font-bold">Hear From Our Clients</h2>
+        <button className="mt-3 xsm:text-xs xsm:px-2 xsm:py-2 px-5 py-2 bg-transparent border border-white  text-white hover:bg-white hover:text-blue-400 transition-all duration-300">
           More Reviews
         </button>
        <div className="flex gap-2"> 
         <button
           onClick={handlePrev}
-          className=" p-5 bg-white rounded-full text-black shadow-md hover:bg-gray-200"
+          className=" p-5 xsm:p-2 bg-white rounded-full text-black shadow-md hover:bg-gray-200"
         >
           <IoIosArrowRoundBack/>
         </button>
       <button
           onClick={handleNext}
-          className="p-5 bg-white rounded-full text-black shadow-md hover:bg-gray-200"
+          className="p-5 xsm:p-2 bg-white rounded-full text-black shadow-md hover:bg-gray-200"
         >
           <IoIosArrowRoundForward />
         </button>
@@ -96,8 +96,8 @@ const Client = () => {
               className="w-full h-full rounded-full object-cover"
             />
           </div>
-          <div className="relative bottom-10"><h3 className="font-bold text-lg">{testimonials[currentIndex].name}</h3>
-          <p className="mt-4 text-gray-600">{testimonials[currentIndex].feedback}</p></div>
+          <div className="relative bottom-10 "><h3 className="font-bold text-lg xsm:text-xs">{testimonials[currentIndex].name}</h3>
+          <p className="mt-4 text-gray-600 xsm:text-xs">{testimonials[currentIndex].feedback}</p></div>
         </div>
       </div>
     </div>

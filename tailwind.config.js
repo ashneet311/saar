@@ -9,6 +9,9 @@ module.exports = {
       boxShadow: {
         'custom-inner': 'inset 10px 2px 40px rgba(0, 0, 0, 0.6)',
       },
+      screens: {
+        'xsm': { 'min': '320px', 'max': '480px' },
+      },
     },
   },
   plugins: [],
