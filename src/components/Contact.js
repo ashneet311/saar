@@ -68,9 +68,9 @@ const Contact = () => {
     }
   };
   return (
-    <div className="font-roboto xsm:overflow-hidden">
+    <div className="font-roboto xsm:overflow-hidden xsm:-mt-10">
       {/* Header Section */}
-      <div className="bg-[#9A7B4F] w-full h-full pt-10 flex items-center flex-col p-4 gap-2">
+      <div className="bg-[#003550] w-full h-full pt-10 flex items-center flex-col p-4 gap-2">
         <h1 className="text-3xl tracking-wide text-white">Contact Us</h1>
         <p className="text-white text-xs tracking-wider">
           <NavLink to="/" className="text-white">
@@ -104,37 +104,37 @@ const Contact = () => {
             </h1>
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <FaLocationDot className="text-white text-lg" />
                 </div>
                 B-210, 2nd Floor, Elante Offices
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <FaBuilding className="text-white text-lg" />
                 </div>
                 Industrial Area Phase - 1, Chandigarh
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <FaRegFlag className="text-white text-lg" />
                 </div>
                 Postal Code - 160002, India
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <FaWhatsapp className="text-white text-lg" />
                 </div>
                 Whatsapp : 918558806719
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <IoCallSharp className="text-white text-lg" />
                 </div>
                 +971582450101,+971552959123
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <MdAlternateEmail className="text-white text-lg" />
                 </div>
                 Email: support@alketbirealestate.com
@@ -155,14 +155,14 @@ const Contact = () => {
             </LoadScript>
           </div>
         </div>
-        <div className="flex xsm:flex-col xsm:gap-4 xsm:p-5 md:p-4 p-10">
+        <div className="flex xsm:flex-col xsm:gap-4 xsm:p-5 md:p-4 lg:p-10">
           <div className="flex  flex-col gap-3 xsm:w-full w-[50%]">
             <h1 className="font-semibold text-2xl py-4 text-start">
               Maharashtra (Corporate Office)
             </h1>
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <FaLocationDot className="text-white text-lg" />
                 </div>
                 Supreme Headquarters, Office 1003, 10th Floor Junction of 14th
@@ -170,31 +170,31 @@ const Contact = () => {
                 33rd road
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <FaBuilding className="text-white text-lg" />
                 </div>
                 Bandra,West Mumbai, Maharashtra
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <FaRegFlag className="text-white text-lg" />
                 </div>
                 Postal Code - 400050, Indian
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <FaWhatsapp className="text-white text-lg" />
                 </div>
                 Whatsapp : 918558806719
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <IoCallSharp className="text-white text-lg" />
                 </div>
                 226-509-2230, +91-8288971800
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <MdAlternateEmail className="text-white text-lg" />
                 </div>
                 Email: support@alketbirealestate.com
@@ -207,37 +207,37 @@ const Contact = () => {
             </h1>
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <FaLocationDot className="text-white text-lg" />
                 </div>
                 314, 3rd Floor, Tower 4, DLF Corporate Greens
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <FaBuilding className="text-white text-lg" />
                 </div>
                 Sector 74, Gurgaon
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <FaRegFlag className="text-white text-lg" />
                 </div>
                 Postal Code - 122004, Indian
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <FaWhatsapp className="text-white text-lg" />
                 </div>
                 Whatsapp : 918558806719
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <IoCallSharp className="text-white text-lg" />
                 </div>
                 124-518-1170, +91-8558806708
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#9A7B4F] p-2 text-center rounded-[3px]">
+                <div className="bg-[#003550] p-2 text-center rounded-[3px]">
                   <MdAlternateEmail className="text-white text-lg" />
                 </div>
                 Email: support@alketbirealestate.com
@@ -350,7 +350,7 @@ const Contact = () => {
             <div className="md:col-span-2 text-center">
               <button
                 type="submit"
-                className="bg-[#9A7B4F] text-white px-6 py-2 rounded hover:bg-blue-600 transition-all duration-300"
+                className="bg-[#003550] text-white px-6 py-2 rounded hover:bg-blue-600 transition-all duration-300"
               >
                 Send Message
               </button>

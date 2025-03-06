@@ -52,13 +52,13 @@ const Herosection = () => {
     // main hero-section
     <div className="relative xsm:overflow-hidden ">
       {/* Slider for the background */}
-      <Slider {...sliderSettings} className="h-[550px] ">
+      <Slider {...sliderSettings} className="h-[550px] xsm:h-[350px] ">
         {slides.map((slide, index) => (
           <div key={index}>
             <img
               src={slide}
               alt={`Slide ${index + 1}`}
-              className="w-full h-[550px] object-cover "
+              className="w-full h-[550px] xsm:h-[350px] object-cover "
             />
           </div>
         ))}
@@ -84,7 +84,7 @@ const Herosection = () => {
         </div>
 
         {/* Buildings */}
-        <div className=" bg-[#9A7B4F] xsm:hidden md:flex opacity-60 flex justify-around space-x-20 py-3 md:px-5 lg:px-10">
+        <div className=" bg-[#003550] xsm:hidden md:flex opacity-60 flex justify-around space-x-20 py-3 md:px-5 lg:px-10">
           {[
             { img: "condo.png", text: "New Project" },
             { img: "apartment.png", text: "Apartment" },

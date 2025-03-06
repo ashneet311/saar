@@ -1,29 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Link, NavLink, Route, Routes } from "react-router-dom";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
 import Aboutus from "./Aboutus";
 import Home from "./Home";
 import Property from "./Property";
 import Contact from "./Contact";
+import Insight from "./Insight";
 
 const Navbar = () => {
-  const [isVisible, setIsVisible] = useState(true); // Track navbar visibility
-  const [lastScrollY, setLastScrollY] = useState(0); // Track last scroll position
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Toggle menu
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
     if (currentScrollY > lastScrollY) {
-      setIsVisible(false); // Hide navbar on scroll down
+      setIsVisible(false);
     } else {
-      setIsVisible(true); // Show navbar on scroll up
+      setIsVisible(true);
     }
     setLastScrollY(currentScrollY);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup event listener on unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -36,76 +40,103 @@ const Navbar = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         } fixed top-0 left-0 w-full z-50`}
       >
-        <div className="bg-[#9A7B4F] text-white py-2 px-4 lg:text-base xsm:text-xs  md:text-xs flex xsm:flex-col justify-between items-center">
-          <div className="flex gap-14 xsm:flex-col xsm:gap-0">
-            <Link
-              className="hover:text-[#9A7B4F]"
-              to="callto:+971582450101,+971552959123"
-            >
-              +971582450101,+971552959123
-            </Link>
 
-            <Link to="mailto:support@alketbirealestate.com" target="_blank">
-              Email: support@alketbirealestate.com
-            </Link>
-          </div>
-          <div>
-            <p className="text-sm">Saeed Alketbi & Ahmad Real Estate LLC</p>
-          </div>
-        </div>
-        <nav className="bg-white shadow-md px-1 lg:gap-52 xl:gap-52 2xl:gap-52 md:gap-10 py-0 flex justify-center items-center">
-          <img src="/logo.png" alt="Logo" className="w-40 xsm:w-20 xsm:-ml-5" />
-          <ul className="flex space-x-6 xsm:space-x-3  text-sm xsm:text-xs">
+        <nav className="bg-white shadow-md px-6 flex justify-between items-center relative">
+         
+          <NavLink to="/"> <img src="/logo.png" alt="Logo" className="w-40 xsm:w-24" /></NavLink>
+
+          {/* Desktop Links */}
+          <ul className="hidden xsm:hidden lg:flex space-x-6 text-sm">
             <li>
-              <NavLink
-                to="/"
-                end
-                className={({ isActive }) => (isActive ? "text-blue-600" : "")}
-              >
+              <NavLink to="/" end className={({ isActive }) => (isActive ? "text-blue-600" : "")}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Property"
-                end
-                className={({ isActive }) => (isActive ? "text-blue-600" : "")}
-              >
+              <NavLink to="/Property" end className={({ isActive }) => (isActive ? "text-blue-600" : "")}>
                 Property
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Aboutus"
-                className={({ isActive }) => (isActive ? "text-blue-600" : "")}
-              >
-                About us
+              <NavLink to="/Aboutus" className={({ isActive }) => (isActive ? "text-blue-600" : "")}>
+                About Us
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Contactus"
-                className={({ isActive }) => (isActive ? "text-blue-600" : "")}
-              >
+              <NavLink to="/Contactus" className={({ isActive }) => (isActive ? "text-blue-600" : "")}>
                 Contact Us
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/Insight" className={({ isActive }) => (isActive ? "text-blue-600" : "")}>
+              Insight
+              </NavLink>
+            </li>
           </ul>
-          <a href="https://wa.me/qr/S3LVDB3Y3SB3H1" className=" xsm:ml-2">
-            <button className="bg-[#0bbf41] text-white px-4 xsm:px-2 xsm:py-1 xsm:text-xs py-2 rounded-[2px] flex gap-1 items-center">
+
+          {/* WhatsApp Button */}
+          <a href="https://wa.me/qr/S3LVDB3Y3SB3H1" className="hidden xsm:hidden lg:block">
+            <button className="bg-[#0bbf41] text-white px-4 py-2 rounded-[2px] flex items-center gap-2">
               <FaWhatsapp /> Get Quote
             </button>
           </a>
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden">
+            <button onClick={toggleMenu} className="text-2xl">
+              {isMenuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
+
+          {/* Mobile Menu Dropdown */}
+          <div
+            className={`absolute top-full left-0 w-full bg-white shadow-lg z-40 transition-all duration-300 ${
+              isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+            } overflow-hidden`}
+          >
+            <ul className="flex flex-col items-center py-4">
+              <li>
+                <NavLink to="/" className="py-2 block" onClick={toggleMenu}>
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/Property" className="py-2 block" onClick={toggleMenu}>
+                  Property
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/Aboutus" className="py-2 block" onClick={toggleMenu}>
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/Contactus" className="py-2 block" onClick={toggleMenu}>
+                  Contact Us
+                </NavLink>
+              </li>
+              <li>
+              <NavLink to="/Insight" className="py-2 block" onClick={toggleMenu}>
+              Insight
+              </NavLink>
+            </li>
+              <a href="https://wa.me/qr/S3LVDB3Y3SB3H1" className="py-2 block">
+                <button className="bg-[#0bbf41] text-white px-6 py-2 rounded-[2px] flex items-center gap-2">
+                  <FaWhatsapp /> Get Quote
+                </button>
+              </a>
+            </ul>
+          </div>
         </nav>
       </div>
+
       <div className="mt-24">
-        {" "}
-        {/* Adjust padding to avoid content overlap */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Aboutus" element={<Aboutus />} />
           <Route path="/Property" element={<Property />} />
           <Route path="/Contactus" element={<Contact />} />
+          <Route path="/Insight" element={<Insight/>}/>
         </Routes>
       </div>
     </BrowserRouter>
